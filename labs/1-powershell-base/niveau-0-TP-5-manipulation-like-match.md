@@ -12,26 +12,26 @@ Get-Process
 Observez le nombre de résultat. 
 
 
-Maintenant, exécutez : 
+* Maintenant, exécutez : 
 
 ```
 Get-Process | Where-Object ProcessName -like ‘powershell’ 
 ```
 
-Démarrez l’application PowerShell ISE, et réexécutez la commande précédente. Constatez-vous une différence ? Exécutez maintenant : 
+* Démarrez l’application PowerShell ISE, et réexécutez la commande précédente. Constatez-vous une différence ? Exécutez maintenant : 
 
 ```
 Get-Process | Where-Object ProcessName -like ‘powershell*’ 
 ```
 
-Le processus PowerShell ISE doit normalement apparaître. Comme indiqué, le ‘ ?’ permet d’indiquer un caractère inconnu. 
+* Le processus PowerShell ISE doit normalement apparaître. Comme indiqué, le ‘ ?’ permet d’indiquer un caractère inconnu. 
 
 ```
 Get-Process | Where-Object ProcessName -like ‘powershell_i?e’ 
 Get-Process | Where-Object ProcessName -like ‘powershell_i??’ 
 ```
 
-Lancez maintenant la commande à l’aide de match : 
+* Lancez maintenant la commande à l’aide de match : 
 
 ```
 Get-Process | Where-Object ProcessName -match ‘powershell’ 
@@ -39,9 +39,9 @@ Get-Process | Where-Object ProcessName -match ‘powershell’
 
 PowerShell retourne à la fois PowerShell.exe et PowerShell_ISE.exe. 
 
-Maintenant, prenons la regex suivante : ```^p.*``` 
+* Maintenant, prenons la regex suivante : ```^p.*``` 
 
-A l’aide du cours, essayez de décrypter la signification de ce modèle. Plus court : vous pouvez vous aider du site internet https://regex101.com/. La zone sur la droite « Explanation » donne une description complète du modèle. Exécutez la ligne de commande : 
+Essayez de décrypter la signification de ce modèle. Vous pouvez vous aider du site internet https://regex101.com/. La zone sur la droite « Explanation » donne une description complète du modèle. Exécutez la ligne de commande : 
 
 ```
 Get-Process | Where-Object ProcessName -match ‘^p.*’ 
