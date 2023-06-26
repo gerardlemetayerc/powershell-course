@@ -14,12 +14,12 @@ Import-CSV -Delimiter “;” -Path tp8_promotion_251.csv
 * Indice :  
   * Le prénom peut être vu comme un tableau de caractère. Vous pouvez utiliser l’index pour récupérer le premier élément du tableau (donc la première lettre). 
 
-Enregistrez le retour de votre ligne de commande dans la variable $mesEleves. 
+Enregistrez le retour de votre ligne de commande dans la variable **$mesEleves**. 
 
  
 * Exécutez maintenant la commande suivante : 
 ```
-$mesEleves | Export-CSV -Delimiter “;” -Path tp8_newpromotion_251.csv 
+$mesEleves | Export-CSV -Delimiter “;” -Path tp7_data.csv 
 ```
 
 Vous disposez désormais d’un fichier Excel avec une nouvelle colonne, et une ligne d’en-tête d’information en trop qui ne vous intéresse pas. Exécutez de nouveau la ligne de commande : 
