@@ -40,7 +40,9 @@ L’usage de simples quotes ne permet pas l’interprétation de code dans la ch
 L’usage d’une ligne de commande dans une chaîne de caractères peut être réalisé de plusieurs manières. La méthode la plus simple est la suivante :  
 
 ```
-$maVariable = "$(hostname) est le nom actuel de votre machine." 
-$maVariable 
+$maVariable = "$(hostname) est le nom actuel de votre machine."
+$maVariable2 = "{0} est le nom actuel de votre machine" -f $(hostname)
+$maVariable
+$maVariable2
 ```
 L’usage de ```$()``` permet d’exécuter une commande et de retourner le contenu dans une chaîne de caractères. 
