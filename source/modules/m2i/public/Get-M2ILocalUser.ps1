@@ -1,3 +1,25 @@
+<#
+.Synopsis
+   Permet de récupérer les utilisateurs locaux avec des informations supplémentaires
+.DESCRIPTION
+   Cette ligne de commande permet de récupérer un ou l'ensemble des utilisateurs locaux sur un poste de travail Windows
+.EXAMPLE
+   Get-M2ILocalUser
+.EXAMPLE
+   Get-M2ILocalUser -username Administrateur
+.INPUTS
+   username
+.OUTPUTS
+   Selected.Microsoft.PowerShell.Commands.LocalUser
+.NOTES
+   En cours de développement
+.COMPONENT
+   M2I
+.ROLE
+   User Management
+.FUNCTIONALITY
+   Cette ligne de commande permet de retourner les utilisateurs locaux d'un poste travail, avec les informations associées au chemin du profil.
+#>
 function Get-M2ILocalUser {
 	param(
 		$username
