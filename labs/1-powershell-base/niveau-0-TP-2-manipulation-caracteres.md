@@ -41,7 +41,10 @@ L’usage d’une ligne de commande dans une chaîne de caractères peut être r
 
 ```
 $maVariable = "$(hostname) est le nom actuel de votre machine."
+# Usage de l'opérateur de formattage de chaîne
 $maVariable2 = "{0} est le nom actuel de votre machine" -f $(hostname)
+# Usage de la classe PowerShell de formattage
+$maVariable3 = [string]::Format("{0} est le nom actuel de votre machine",$(hostname))
 $maVariable
 $maVariable2
 ```
