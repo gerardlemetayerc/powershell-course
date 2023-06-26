@@ -26,7 +26,7 @@ Puis
 Get-Help Install-WindowsFeature -Full
 ```
 
-Mise à jour du module d’aide 
+### Mise à jour du module d’aide 
 
 Il est possible de mettre à jour votre module d’aide dans PowerShell. 
 
