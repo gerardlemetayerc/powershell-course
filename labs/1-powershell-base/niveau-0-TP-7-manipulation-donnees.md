@@ -6,7 +6,7 @@ Démarrez PowerShell et assurez-vous d’être dans le même répertoire que vot
 
 * Exécutez la commande PowerShell suivante : 
 ```
-Import-CSV -Delimiter “;” -Path tp8_promotion_251.csv 
+Import-CSV -Delimiter “;” -Path tp7_data.csv 
 ```
  
 *Votre fichier CSV est automatiquement transformé en objet PowerShell. Ajoutez une colonne supplémentaire à votre fichier CSV, prenant en charge la première lettre du prénom, suivi d’un point, suivi du nom de famille, appelée 'samaccountname'.*
