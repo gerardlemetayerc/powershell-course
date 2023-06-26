@@ -30,7 +30,7 @@ CompanyName = 'M2I'
 Copyright = '(c) 2023 Charles GERARD-LE METAYER. Tous droits réservés.'
 
 # Description de la fonctionnalité fournie par ce module
-# Description = ''
+Description = 'Module de test'
 
 # Version minimale du moteur Windows PowerShell requise par ce module
 # PowerShellVersion = ''
