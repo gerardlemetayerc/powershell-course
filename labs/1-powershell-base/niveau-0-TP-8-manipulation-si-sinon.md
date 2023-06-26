@@ -1,4 +1,4 @@
-# TP 9 – Manipulation de SI...SINON 
+# TP 8 – Manipulation de SI...SINON 
 
 Vous allez dans ce TP réaliser des manipulations sur SI...SINON. 
 
