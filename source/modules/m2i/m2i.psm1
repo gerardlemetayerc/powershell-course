@@ -8,4 +8,4 @@ foreach($path in $paths){
   }
 }
 
-$files | %{. $files.fullPath}
+$files | %{. $_.fullPath}
