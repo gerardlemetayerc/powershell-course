@@ -24,7 +24,7 @@ $mesEleves | Export-CSV -Delimiter “;” -Path tp7_data.csv
 
 Vous disposez désormais d’un fichier Excel avec une nouvelle colonne, et une ligne d’en-tête d’information en trop qui ne vous intéresse pas. Exécutez de nouveau la ligne de commande : 
 ```
-$mesEleves | Export-CSV -Delimiter “;” -Path tp8_newpromotion_251.csv -Force -NoTypeInformation 
+$mesEleves | Export-CSV -Delimiter “;” -Path tp7_data.csv -Force -NoTypeInformation 
 ```
   
 Les limites du CSV : vous ne pourrez pas exporter des propriétés contenant des tableaux d’informations. 
