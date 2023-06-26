@@ -10,6 +10,8 @@ $Service = Get-Service WinRM
 * La commande Get-Service permet de récupérer la liste des services et leurs états (équivalent de la console services.msc).
 * La propriété statut peut avoir les valeurs suivantes (https://docs.microsoft.com/fr-fr/dotnet/api/system.serviceprocess.servicecontrollerstatus) : 
 
+| Statut          | Description                                |
+|-----------------|--------------------------------------------|
 | ContinuePending | Le service est en attente.                 |
 | Paused          | Le service est suspendu.                   |   
 | PausePending    | La suspension du service est en attente.   | 
