@@ -45,9 +45,9 @@ TimeGenerated est objet de type « DateTime ».
 
 ## Hors-sujet sur les dates :
 
-*Les objets de type DateTime disposent de différentes fonctions, permettant de réaliser des manipulations d’information sur la date :
-  * Obtenir le jour de la semaine : DayOfWeek
-  * Obtenir x jour en plus (ou en moins si x est négatif) : AddDays(x)
+* Les objets de type DateTime disposent de différentes fonctions (méthodes), permettant de réaliser des manipulations d’information sur la date :
+  * Obtenir le jour de la semaine : **DayOfWeek()**
+  * Obtenir x jour en plus (ou en moins si x est négatif) : **AddDays(x)**
   * La classe DateTime est documentée sur le site de Microsoft ici : [DateTime Structure](https://docs.microsoft.com/fr-fr/dotnet/api/system.datetime). Sur la gauche, la liste des méthodes et propriétés est disponible
 
   
