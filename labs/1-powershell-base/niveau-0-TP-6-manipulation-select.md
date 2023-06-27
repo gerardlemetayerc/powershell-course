@@ -31,7 +31,7 @@ Get-EventLog -LogName Application | Select -First 1 * -ExcludeProperty Container
 * A présent, sélectionnez l’ensemble des résultats, mais en basculant le mode d’affichage en mode "Grid" (affichage graphique) : 
 
 ```
-Get-EventLog -LogName Application | Select -First 1 * -ExcludeProperty Container,Site,MachineName,Data | Out-GridView 
+Get-EventLog -LogName Application | Select * -ExcludeProperty Container,Site,MachineName,Data | Out-GridView 
 ```
 
 Une fenêtre, vous permettant de filtrer les résultats directement en mode graphique, est apparue. Cliquez sur « Ajouter des critères » afin d’afficher les options possibles. Filtrer les évènements sur la date d’aujourd’hui. 
