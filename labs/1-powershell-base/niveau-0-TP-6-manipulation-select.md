@@ -5,40 +5,53 @@ Vous allez dans ce TP utiliser la ligne de commande Select-Object.
 * A l’aide de PowerShell, lancez la ligne de commande : 
 
 ```
-Get-EventLog -LogName Application 
+Get-EventLog -LogName Application
+# Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
+Get-WinEvent -LogName Application
 ```
 
 Un grand nombre de résultat est renvoyé. Sélectionnez à présent la première ligne : 
 
 ```
-Get-EventLog -LogName Application | Select -First 1 
+Get-EventLog -LogName Application | Select -First 1
+# Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
+Get-WinEvent -LogName Application | Select -First 1
 ```
 
 * Les propriétés sont à présent plus facile à lire. A présent, affichez toutes les priorités disponibles pour cet objet : 
 
 ```
-Get-EventLog -LogName Application | Select -First 1 * 
+Get-EventLog -LogName Application | Select -First 1 *
+# Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
+Get-WinEvent -LogName Application | Select -First 1 *
 ```
 
 Pour permettre la lecture, PowerShell a automatiquement basculé l’affichage en mode « liste » plutôt que « tabulaire ».  
 
-* A présent, on va considérer que la colonne MachineName, Site, Data et Container ne sont pas nécessaire. 
+* A présent, on va considérer que la colonne MachineName, Site, Data et ContainerLog ne sont pas nécessaire. 
 
 ```
-Get-EventLog -LogName Application | Select -First 1 * -ExcludeProperty Container,Site,MachineName,Data 
+Get-EventLog -LogName Application | Select -First 1 * -ExcludeProperty ContainerLog, Site, MachineName, Data
+# Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
+Get-WinEvent -LogName Application | Select -First 1 * -ExcludeProperty Site,MachineName,Data
+
 ```
 
 * A présent, sélectionnez l’ensemble des résultats, mais en basculant le mode d’affichage en mode "Grid" (affichage graphique) : 
 
 ```
-Get-EventLog -LogName Application | Select * -ExcludeProperty Container,Site,MachineName,Data | Out-GridView 
+Get-EventLog -LogName Application | Select * -ExcludeProperty Container,Site,MachineName,Data | Out-GridView
+# Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
+Get-WinEvent -LogName Application | Select * -ExcludeProperty Container,Site,MachineName,Data | Out-GridView 
 ```
 
 Une fenêtre, vous permettant de filtrer les résultats directement en mode graphique, est apparue. Cliquez sur « Ajouter des critères » afin d’afficher les options possibles. Filtrer les évènements sur la date d’aujourd’hui. 
 
 * A présent, ajoutez une colonne supplémentaire, appelée « JourDeLaSemaine ». Cette colonne contiendra une extrapolation du jour de la semaine au regard de la date de l’évènement : 
 ```
-Get-EventLog -LogName Application | Select -First 1 TimeGenerated, @{Name="JourDeLaSemaine";Expression={$_.TimeGenerated.DayOfWeek}} 
+Get-EventLog -LogName Application | Select -First 1 TimeGenerated, @{Name="JourDeLaSemaine";Expression={$_.TimeGenerated.DayOfWeek}}
+# Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
+Get-WinEvent -LogName Application | Select -First 1 TimeGenerated, @{Name="JourDeLaSemaine";Expression={$_.TimeGenerated.DayOfWeek}} 
 ```
 
 TimeGenerated est objet de type « DateTime ».  
