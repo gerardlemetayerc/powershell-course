@@ -1,4 +1,4 @@
-# TP 8 – Manipulation de données 
+# TP 7 – Manipulation de données 
 
 Vous allez dans ce TP manipuler des données. Vous allez avoir pour ce faire avoir besoin du fichier CSV lié à ce TP. 
 
@@ -6,7 +6,7 @@ Démarrez PowerShell et assurez-vous d’être dans le même répertoire que vot
 
 * Exécutez la commande PowerShell suivante : 
 ```
-Import-CSV -Delimiter “;” -Path tp7_data.csv 
+Import-CSV -Delimiter "," -Path tp7_data.csv 
 ```
  
 *Votre fichier CSV est automatiquement transformé en objet PowerShell. Ajoutez une colonne supplémentaire à votre fichier CSV, prenant en charge la première lettre du prénom, suivi d’un point, suivi du nom de famille, appelée 'samaccountname'.*
@@ -19,12 +19,12 @@ Enregistrez le retour de votre ligne de commande dans la variable **$mesEleves**
  
 * Exécutez maintenant la commande suivante : 
 ```
-$mesEleves | Export-CSV -Delimiter “;” -Path tp7_data.csv 
+$mesEleves | Export-CSV -Delimiter "," -Path tp7_data.csv 
 ```
 
 Vous disposez désormais d’un fichier Excel avec une nouvelle colonne, et une ligne d’en-tête d’information en trop qui ne vous intéresse pas. Exécutez de nouveau la ligne de commande : 
 ```
-$mesEleves | Export-CSV -Delimiter “;” -Path tp7_data.csv -Force -NoTypeInformation 
+$mesEleves | Export-CSV -Delimiter "," -Path tp7_data.csv -Force -NoTypeInformation 
 ```
   
 Les limites du CSV : vous ne pourrez pas exporter des propriétés contenant des tableaux d’informations. 
