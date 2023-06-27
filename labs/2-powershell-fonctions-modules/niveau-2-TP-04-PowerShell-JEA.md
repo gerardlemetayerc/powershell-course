@@ -9,7 +9,6 @@ $JeaConfig = @{
     SessionType = 'RestrictedRemoteServer'
     RunAsVirtualAccount = $true
     TranscriptDirectory = 'C:\JEA\Transcripts'
-    ModulesToImport = @('AzureAD')
     VisibleCmdlets = @('Get-Process')
     Path = "C:\JEA\JEAConfig.pssc"
 }
