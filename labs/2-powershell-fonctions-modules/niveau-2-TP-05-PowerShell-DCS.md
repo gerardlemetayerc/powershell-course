@@ -7,7 +7,7 @@ Configuration InstallIIS
 {
     Import-DscResource -ModuleName PSDesiredStateConfiguration
     
-    Node "$(localhost)"
+    Node "$(hostname)"
     {
         WindowsFeature IIS
         {
