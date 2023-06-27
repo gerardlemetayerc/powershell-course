@@ -33,6 +33,3 @@ Exportez le résultat dans un nouveau fichier CSV.
 
 * Tips pour la boucle for : 
    * La commande Get-Random permet d’obtenir un nombre aléatoire entre deux bornes 
-   * Il existe une table, appelée table ASCII, associant une valeur numérique à un caractère (exemple de table : https://www.asciitable.com/)
-   * Il est possible en PowerShell de récupérer un caractère en fonction de sa valeur décimale (Dec), en réalisant un cast explicite  
-      * Exemple : **[char]46** équivaut au caractère **.** 
