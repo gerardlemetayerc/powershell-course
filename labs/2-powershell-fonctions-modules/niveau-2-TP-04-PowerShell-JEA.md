@@ -9,14 +9,14 @@ $JeaConfig = @{
     TranscriptDirectory = 'C:\JEA\Transcripts'
     ModulesToImport = @('AzureAD')
     VisibleCmdlets = @('Get-Process')
-    Path = "C:\JEA\"
+    Path = "C:\JEA\JEAConfig.pssc"
 }
 New-PSSessionConfigurationFile @JeaConfig 
 ```
 
 ## Etape 2 - Enregistrement du profil
 ```
-Register-PSSessionConfiguration -Name 'JEAProfile' -Path 'C:\JEA\SyncProfile.pssc'
+Register-PSSessionConfiguration -Name 'JEAProfile' -Path 'C:\JEA\JEAConfig.pssc'
 ```
 
 ## Etape 3 - Définitio des autorisations
