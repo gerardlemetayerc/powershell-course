@@ -26,7 +26,7 @@ Restart-Service winRM
 ## Etape 3 - Connexion à JEA
 
 ```
-New-PSesssion -ConfigurationName JEAProfile | Enter-PSSession
+New-PSSesssion -ConfigurationName JEAProfile | Enter-PSSession
 ```
 
 
