@@ -1,4 +1,7 @@
 # TP 05 - Déploiement par DSC
+
+Depuis PoweShell en tant qu'administrateur
+
 ```
 Configuration InstallIIS
 {
@@ -11,7 +14,13 @@ Configuration InstallIIS
             Ensure = "Present"
             Name = "Web-Server"
         }
-        
+
+        Directory DefaultDirectory
+        {
+            Ensure = "Present"
+        }
+
+
         File DefaultWebPage
         {
             Ensure = "Present"
@@ -29,4 +38,4 @@ InstallIIS -OutputPath "C:\MOF"
 
 # Appliquer la configuration sur le nœud cible
 Start-DscConfiguration -Path "C:\MOF" -Wait -Verbose
-``
+```
