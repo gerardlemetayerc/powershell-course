@@ -7,7 +7,7 @@ Configuration InstallIIS
 {
     Import-DscResource -ModuleName PSDesiredStateConfiguration
     
-    Node "ServerName"
+    Node "$(localhost)"
     {
         WindowsFeature IIS
         {
@@ -15,8 +15,10 @@ Configuration InstallIIS
             Name = "Web-Server"
         }
 
-        Directory DefaultDirectory
+        File DefaultDirectory
         {
+            Type = 'Directory'
+            DestinationPath = "C:\WebSite"
             Ensure = "Present"
         }
 
