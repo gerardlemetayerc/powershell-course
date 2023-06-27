@@ -1,10 +1,10 @@
-# TP 11 – Manipulation de “Foreach” et de “for” 
+# TP 10 – Manipulation de "Foreach" et de "for"
 
 Vous allez dans ce TP réaliser une manipulation courante de la commande “foreach”. Vous aurez besoin de nouveau du fichier Excel du TP 8. 
 
 * Chargez le contenu du fichier à l’aide de la commande Import-CSV 
 ```
-$mesEleves = Import-CSV -Delimiter “;”  -path xxx.csv 
+$mesEleves = Import-CSV -Delimiter ","  -path xxx.csv 
 ```
 
 * Réalisez une boucle qui ajoute les propriétés suivantes pour chaque élève : 
