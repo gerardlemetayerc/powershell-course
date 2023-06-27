@@ -1,4 +1,4 @@
-# TP 04 - Manipulation de JEA
+# TP 01 - Manipulation de JEA
 
 ## Étape 1 : Création d'un profil PowerShell JEA
 
