@@ -26,7 +26,7 @@ function Get-RandomPassword {
 }
  
 ```
-
+Lien vers la documentation de référence sur la méthodes : [system.web.security.membership.generatepassword](https://learn.microsoft.com/fr-fr/dotnet/api/system.web.security.membership.generatepassword?view=netframework-4.8.1)
 
 
 Exportez le résultat dans un nouveau fichier CSV. 
