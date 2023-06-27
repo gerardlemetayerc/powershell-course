@@ -1,5 +1,7 @@
 # TP 05 - Déploiement par DSC
 
+Dans ce TP, vous allez déployer sur le serveur exécutant PowerShell DSC un serveur IIS ainsi que synchroniser un répertoire.
+
 Depuis PoweShell en tant qu'administrateur
 
 ```
