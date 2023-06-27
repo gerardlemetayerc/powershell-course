@@ -2,6 +2,8 @@
 
 ## Étape 1 : Création d'un profil PowerShell JEA
 
+Executez PowerShell en tant qu'administrateur.
+
 ```
 $JeaConfig = @{
     SessionType = 'RestrictedRemoteServer'
@@ -17,9 +19,18 @@ New-PSSessionConfigurationFile @JeaConfig
 ## Etape 2 - Enregistrement du profil
 ```
 Register-PSSessionConfiguration -Name 'JEAProfile' -Path 'C:\JEA\JEAConfig.pssc'
+Restart-Service winRM
 ```
 
-## Etape 3 - Définitio des autorisations
+
+## Etape 3 - Connexion à JEA
+
+```
+New-PSesssion -ConfigurationName JEAProfile | Enter-PSSession
+```
+
+
+## Etape 4 - Définition des autorisations (optionelle)
 
 ```
 $Group = Get-ADGroup -Identity 'JEA-SyncAdmins’ 
@@ -27,11 +38,4 @@ Set-PSSessionConfiguration -Name 'JEAProfile' -ShowSecurityDescriptorUI
 
 $SDDL = (Get-PSSessionConfiguration -Name 'SyncProfile').SecurityDescriptorSddl $NewSDDL = $SDDL -replace 'S:(.*)', "S:$1;G:${Group.SID}(R)« 
 Set-PSSessionConfiguration -Name 'SyncProfile' -SecurityDescriptorSddl $NewSDDL
-```
-
-
-## Etape 4 - Connexion à JEA
-
-```
-New-PSesssion -ConfigurationName JEAProfile | Enter-PSSession
 ```
