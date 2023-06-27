@@ -11,7 +11,23 @@ $mesEleves = Import-CSV -Delimiter ","  -path xxx.csv
   * Son nom d’utilisateur (format p.nom) 
   * Son adresse email (format p.nom@cfa-insta.local) 
   * Son mot de passe 
-      * Pour la génération du mot de passe, appuyez-vous sur une boucle for afin d’automatiser la génération d’un mot de passe sur 10 caractères 
+      * Pour la génération du mot de passe, appuyez-vous sur une boucle for afin d’automatiser la génération d’un mot de passe sur 10 caractères
+      * Une classe "native" sur les OS à partir de Windows Server 2016/2019
+   
+```
+function Get-RandomPassword {
+    param (
+        [Parameter(Mandatory)]
+        [int] $length,
+        [int] $amountOfNonAlphanumeric = 1
+    )
+    Add-Type -AssemblyName 'System.Web'
+    return [System.Web.Security.Membership]::GeneratePassword($length, $amountOfNonAlphanumeric)
+}
+ 
+```
+
+
 
 Exportez le résultat dans un nouveau fichier CSV. 
 
