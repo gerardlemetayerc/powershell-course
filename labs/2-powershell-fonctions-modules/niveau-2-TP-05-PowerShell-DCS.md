@@ -30,7 +30,7 @@ Configuration InstallIIS
             Recurse = $true
             SourcePath = "C:\WebSite"
             DestinationPath = "C:\inetpub\wwwroot"
-            DependsOn = "[WindowsFeature]IIS"
+            DependsOn = "[WindowsFeature]IIS", "[File]DefaultDirectory"
         }
     }
 }
