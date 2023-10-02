@@ -15,26 +15,26 @@ Observez le nombre de résultat.
 * Maintenant, exécutez : 
 
 ```
-Get-Process | Where-Object ProcessName -like ‘powershell’ 
+Get-Process | Where-Object ProcessName -like 'powershell' 
 ```
 
 * Démarrez l’application PowerShell ISE, et réexécutez la commande précédente. Constatez-vous une différence ? Exécutez maintenant : 
 
 ```
-Get-Process | Where-Object ProcessName -like ‘powershell*’ 
+Get-Process | Where-Object ProcessName -like 'powershell*' 
 ```
 
 * Le processus PowerShell ISE doit normalement apparaître. Comme indiqué, le ‘ ?’ permet d’indiquer un caractère inconnu. 
 
 ```
-Get-Process | Where-Object ProcessName -like ‘powershell_i?e’ 
-Get-Process | Where-Object ProcessName -like ‘powershell_i??’ 
+Get-Process | Where-Object ProcessName -like 'powershell_i?e' 
+Get-Process | Where-Object ProcessName -like 'powershell_i??' 
 ```
 
 * Lancez maintenant la commande à l’aide de match : 
 
 ```
-Get-Process | Where-Object ProcessName -match ‘powershell’ 
+Get-Process | Where-Object ProcessName -match 'powershell'
 ```
 
 PowerShell retourne à la fois PowerShell.exe et PowerShell_ISE.exe. 
@@ -44,7 +44,7 @@ PowerShell retourne à la fois PowerShell.exe et PowerShell_ISE.exe.
   Exécutez la ligne de commande : 
 
 ```
-Get-Process | Where-Object ProcessName -match ‘^p.*’ 
+Get-Process | Where-Object ProcessName -match '^p.*' 
 ```
 
 PowerShell retourne l’ensemble des résultats liés au modèle.  
