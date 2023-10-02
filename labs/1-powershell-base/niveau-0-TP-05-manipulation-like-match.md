@@ -64,13 +64,13 @@ Il est possible de regrouper des conditions à l’aide de parenthèses
 
 La référence à la donnée est réalisée par la variable $_ 
 
-* A l’aide de PowerShell, lancez la ligne de commande suivante : 
+* La commande suivante permet de rechercher les processus dont le nom correspond au modèle « PowerShell » et donc l’ID de processus est supérieur à 1. A l’aide de PowerShell, lancez la ligne de commande suivante : 
 
 ```
 Get-Process | Where-Object {$_.Name -match "PowerShell" -and $_.ID -gt 1} 
 ```
 
-* Cette ligne permet de rechercher les processus dont le nom correspond au modèle « PowerShell » et donc l’ID de processus est supérieur à 1. 
+* La commande suivante ne fonctionne pas tel qu'attendu. Pourquoi?
 ```
 Get-Process | Where-Object {$_.Name -match "PowerShell" -or $_.Name -notlike "*ISE"} 
 ```
