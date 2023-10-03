@@ -1,4 +1,4 @@
-# Correctif - TP 7 – Manipulation de données
+# Correctif - TP 07 – Manipulation de données
 
 ```
 $eleves = Import-CSV -Delimiter "," -Path C:\Users\Administrateur\tp7_data.csv
