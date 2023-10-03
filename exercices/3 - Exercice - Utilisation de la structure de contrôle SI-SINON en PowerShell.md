@@ -13,9 +13,8 @@ if (Test-Path -Path $CheminDuRepertoire -PathType Container) {
     Write-Host "Le répertoire existe : $cheminDuRepertoire"
 } else {
     Write-Host "Le répertoire n'existe pas : $cheminDuRepertoire"
-    # Création du répertoire et de son arborescence
+    # Création du répertoire et de son arborescence (à l'aide du paramètre -Force)
     New-Item -ItemType Directory -Path $cheminDuRepertoire -Force
 }
 ```
 
-* Testez le script en modifiant la valeur de la variable ```$CheminDuRepertoire``` pour un répertoire qui existe ou qui n'existe pas sur votre système.
