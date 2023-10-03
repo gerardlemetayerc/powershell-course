@@ -1,5 +1,13 @@
 
-# Solution 
+# Configuration de winrm
+
+* Avec CMD en tant qu'administrateur
+```cmd
+winrm quickconfig
+winrm set winrm/config/client @{TrustedHosts="*"}
+```
+
+# Script 
 ```powershell
 $credential = Get-Credential
 
