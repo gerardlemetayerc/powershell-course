@@ -4,6 +4,7 @@
 prenom;nom;mdp
 ```
 
+* Importez ce fichier CSV dans une variable au nom de votre choix (par exemple, ```$userList```)
 * A l'aide d'une boucle **foreach**, générez :
   * L'adresse email de l'utilisateur au format ```prenom.nom@lab.local```
   * Le SamAccountname de l'utilisateur au format suivant ```USXXXXXXXXXX```, où XXXXXXXXX représente l'année, le mois, le jour et un compteur sur 2 digit
