@@ -9,7 +9,7 @@ Démarrez PowerShell et assurez-vous d’être dans le même répertoire que vot
 Import-CSV -Delimiter "," -Path tp7_data.csv 
 ```
  
-*Votre fichier CSV est automatiquement transformé en objet PowerShell. Ajoutez une colonne supplémentaire à votre fichier CSV, prenant en charge la première lettre du prénom, suivi d’un point, suivi du nom de famille, appelée 'samaccountname'.*
+* **Votre fichier CSV est automatiquement transformé en objet PowerShell. Ajoutez une colonne supplémentaire à votre fichier CSV, prenant en charge la première lettre du prénom, suivi d’un point, suivi du nom de famille, appelée 'samaccountname'.**
 
 * Indice :  
   * Le prénom peut être vu comme un tableau de caractère. Vous pouvez utiliser l’index pour récupérer le premier élément du tableau (donc la première lettre). 
