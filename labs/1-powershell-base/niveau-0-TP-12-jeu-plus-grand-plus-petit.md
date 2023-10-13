@@ -33,3 +33,38 @@
 ```
 $CSV = Invoke-RestMethod https://raw.githubusercontent.com/gerardlemetayerc/powershell-course/main/labs/1-powershell-base/resources/tp12-conf.csv | ConvertFrom-CSV -Delimiter ";"
 ```
+
+
+## Etape 3
+
+* Reprenez le code de l'étape 2
+* Mettez à jour le code PowerShell afin de : 
+  * Générez un identifiant de partie (unique) (la ligne de commande ```New-GUID``` permet d'obtenir des identifiants uniques au format GUID)
+  * Générez un objet Powershell personnalisé contenant les informations suivantes :
+    * ID de partie
+    * Date de partie au format yyyy-MM-dd hh:mm
+    * Nom du joueur (qui sera demandé en début de partie)
+    * Niveau
+    * Nombre d'essai
+  * Exportez les informations de parties dans un fichier CSV appelé "party_history.csv" 
+
+### Rappel / Tips
+
+* Pour générer un objet PowerShell, vous avez la ligne de commande suivante :
+
+```powershell
+$monObject = [PSCustomObject]@{
+    Prop1 = "Value"
+    Prop2 = "Value2"
+}
+```
+
+* Pour générer un arrayList, vous avez la ligne de commande suivante :
+
+```
+$maCollection = [System.Collections.ArrayList]::new() 
+$maCollection.Add($monObject)
+```
+
+* L'ID de partie, la date et le nom du jour sont à générer avant la boucle foreach
+* Le niveau, le nombre d'essai dans la boucle, lors d'une réussite
