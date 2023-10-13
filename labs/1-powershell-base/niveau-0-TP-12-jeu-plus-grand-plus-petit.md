@@ -12,13 +12,24 @@
     * Affichez "plus petit" si le nombre rentré par l'utilisateur est plus grand que le nombre initialisé par le jeu
     * Affichez "plus grand" si le nombre rentré par l'utilisateur est plus petit que le nombre initialisé par le jeu
 
+
+* La correction de cet exercice est disponible [ici](./resources/tp12-conf.csv).
+
 ## Etape 2
 
 * Mettez à jour votre code afin de rajouter les options suivantes :
-  * Téléchargez le fichier de configuration [tp12-conf.csv](./resources/tp12-conf.csv)
+  * Téléchargez le fichier de configuration [tp12-conf.csv](./correctif/correction-tp-12-etape1.ps1)
   * Ajoutez une nouvelle variable initialisée en début script : ```$perdu```
   * Chargez le fichier CSV dans une variable $niveaux
   * Pour chaque itération du fichier CSV, 
     * réalisez la boucle précédente avec les configurations du fichier CSV
     * Affichez un message en début de jeu résumant la configuration actuelle
     * Si l'utilisateur perd dans son niveau, la boucle d'itération du fichier CSV doit cesser avec un message "Perdu. :("
+
+### Rappels
+
+* La ligne de commande permettant de charger un fichier CSV est ```Import-CSV -path <chemin> -delimiter ';'```
+* Il est possible de faire l'import CSV directement depuis le stockage GitHub, à l'aide du code ci-dessous :
+```
+$CSV = Invoke-RestMethod https://raw.githubusercontent.com/gerardlemetayerc/powershell-course/main/labs/1-powershell-base/resources/tp12-conf.csv | ConvertFrom-CSV -Delimiter ";"
+```
