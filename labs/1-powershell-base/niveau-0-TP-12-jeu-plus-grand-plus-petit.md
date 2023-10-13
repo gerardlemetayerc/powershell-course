@@ -26,7 +26,7 @@
     * Affichez un message en début de jeu résumant la configuration actuelle
     * Si l'utilisateur perd dans son niveau, la boucle d'itération du fichier CSV doit cesser avec un message "Perdu. :("
 
-### Rappels
+### Rappels / Tips
 
 * La ligne de commande permettant de charger un fichier CSV est ```Import-CSV -path <chemin> -delimiter ';'```
 * Il est possible de faire l'import CSV directement depuis le stockage GitHub, à l'aide du code ci-dessous :
