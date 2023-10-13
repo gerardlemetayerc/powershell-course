@@ -16,7 +16,7 @@
 
 * Mettez à jour votre code afin de rajouter les options suivantes :
   * Téléchargez le fichier de configuration [tp12-conf.csv](./resources/tp12-conf.csv)
-  * Ajoutez une nouvelle variable initialisée en début script : ```powershell $perdu```
+  * Ajoutez une nouvelle variable initialisée en début script : ```$perdu```
   * Chargez le fichier CSV dans une variable $niveaux
   * Pour chaque itération du fichier CSV, 
     * réalisez la boucle précédente avec les configurations du fichier CSV
