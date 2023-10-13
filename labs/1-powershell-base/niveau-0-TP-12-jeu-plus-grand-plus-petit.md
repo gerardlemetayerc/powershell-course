@@ -13,7 +13,7 @@
     * Affichez "plus grand" si le nombre rentré par l'utilisateur est plus petit que le nombre initialisé par le jeu
 
 
-* La correction de cet exercice est disponible [ici](./correctif/correction-tp-12-etape1.ps1).
+* La correction de cet exercice est disponible [ici](./correction/correction-tp-12-etape1.ps1).
 
 ## Etape 2
 
