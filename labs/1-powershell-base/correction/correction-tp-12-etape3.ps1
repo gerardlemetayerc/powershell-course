@@ -1,10 +1,5 @@
 ﻿$CSV = Invoke-RestMethod https://raw.githubusercontent.com/gerardlemetayerc/powershell-course/main/labs/1-powershell-base/resources/tp12-conf.csv | ConvertFrom-CSV -Delimiter ";"
 
-# Génération des informations "statiques"
-$partyID   = 
-$username  = 
-$timeStamp = 
-
 $GUID     = New-Guid
 $date     = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 $username = Read-Host "Entrez votre nom de joueur"

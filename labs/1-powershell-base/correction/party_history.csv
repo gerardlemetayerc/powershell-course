@@ -1,0 +1,5 @@
+#TYPE System.Management.Automation.PSCustomObject
+"partyID";"username";"date";"niveau";"nbEssai"
+"ee94310d-f684-422a-a71a-50273191be0a";"cgerardl";"2023-10-13 12:45:34";"1";"5"
+"ee94310d-f684-422a-a71a-50273191be0a";"cgerardl";"2023-10-13 12:45:34";"2";"4"
+"6654876c-42dc-455e-869d-b291c2063eca";"thomas";"2023-10-13 12:46:32";"1";"4"
