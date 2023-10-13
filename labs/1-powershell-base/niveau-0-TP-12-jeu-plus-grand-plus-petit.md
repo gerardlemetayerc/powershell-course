@@ -13,12 +13,12 @@
     * Affichez "plus grand" si le nombre rentré par l'utilisateur est plus petit que le nombre initialisé par le jeu
 
 
-* La correction de cet exercice est disponible [ici](./resources/tp12-conf.csv).
+* La correction de cet exercice est disponible [ici](./correctif/correction-tp-12-etape1.ps1).
 
 ## Etape 2
 
 * Mettez à jour votre code afin de rajouter les options suivantes :
-  * Téléchargez le fichier de configuration [tp12-conf.csv](./correctif/correction-tp-12-etape1.ps1)
+  * Téléchargez le fichier de configuration [tp12-conf.csv](./resources/tp12-conf.csv)
   * Ajoutez une nouvelle variable initialisée en début script : ```$perdu```
   * Chargez le fichier CSV dans une variable $niveaux
   * Pour chaque itération du fichier CSV, 
