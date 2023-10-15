@@ -1,42 +1,31 @@
-﻿ param(
-        [Parameter(Mandatory = $true)]
-        $message,
+﻿param(
+    [Parameter(Mandatory = $true)]
+    [string]$message,
 
-        [Parameter(Mandatory = $true)]
-        [ValidateSet("info", "warning", "error")]
-        $level,
+    [Parameter(Mandatory = $true)]
+    [ValidateSet("info", "warning", "error")]
+    [string]$level,
 
-        [Parameter(Mandatory = $true)]
-        $path
+    [Parameter(Mandatory = $true)]
+    [string]$path
+)
 
+# Utilisation d'un switch pour déterminer la couleur en fonction du niveau
+switch ($level) {
+    "warning" { $textcolor = "Yellow" }
+    "error"   { $textcolor = "Red" }
+    default   { $textcolor = "White" }
+}
 
-    )
+Write-Verbose "Génération du timestamp"
+# Récupération du timestamp
+$timeStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
-    # Définition de la couleur par niveau de message
-    $textcolor = "White"
-    
-    if($level -like "warning"){
-        $textcolor = "yellow"
-    }
-    elseif($level -like "error"){
-        $textcolor = "red"
-    }
+# Construction de la chaîne du message
+Write-Verbose "Construction de la chaîne du message"
+$stringMsg = "$timeStamp - $level - $message"
 
+Write-Host $stringMsg -ForegroundColor $textcolor
 
-
-    Write-Verbose "Génération du timestamp"
-    # Récupération du timestamp
-    $timeStamp = Get-Date -Format "yyyy-MM-dd hh:mm:ss"
-    
-    # Construction de la chaîne du message
-    Write-Verbose "Construction de la chaîne du message"
-    ## Ecriture 1
-    $stringMsg = "{0} - {1} - {2}" -f $timeStamp, $level, $message
-    ## Ecriture 2
-    $stringMsg = "$timeStamp - $level - $message"
-
-
-    Write-Host $stringMsg -ForegroundColor $textcolor
-
-    Write-Verbose "Ecrite tu fichier $path avec argument Append"
-    $stringMsg | Out-File $path -Append
+Write-Verbose "Ecriture au fichier $path avec argument Append"
+$stringMsg | Out-File $path -Append
