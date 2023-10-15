@@ -8,7 +8,7 @@ PowerShell est un outil puissant, et avec cette puissance vient la nécessité d
 2. [Visualiser la politique d'exécution actuelle](#visualiser-la-politique-dexécution-actuelle)
 3. [Configurer une politique d'exécution](#configurer-une-politique-dexécution)
 4. [Les différents modes de politiques d'exécution](#les-différents-modes-de-politiques-dexécution)
-5. [Politiques d'exécution par défaut selon l'OS](#politiques-dexecution-par-defaut-selon-los)
+5. [Politiques d'exécution par défaut selon l'OS](#politiques-dexécution-par-défaut-selon-los)
 
 ### Qu'est-ce qu'une politique d'exécution ?
 
