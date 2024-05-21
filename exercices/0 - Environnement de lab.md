@@ -25,6 +25,7 @@ $switch = New-VMSwitch -Name "Switch-Externe" -NetAdapterName (Get-NetAdapter | 
 foreach($VM in $VMLists){
     $VMName = "VM-$VM"
     New-VM -Name $VMName -MemoryStartupBytes 2GB -Generation 2 -NewVHDPath "$VMPaths\$VMName\Virtual Hard Disks\VM-$VM.vhdx" -NewVHDSizeBytes 60GB -SwitchName $switch.Name
+    Add-VMDvdDrive -VMName $VMName
     Set-VMDvdDrive -VMName $VMName  -Path $ISOPath
     Start-VM -Name $VMName
 }
