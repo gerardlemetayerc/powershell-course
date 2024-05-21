@@ -51,7 +51,7 @@ Une fenêtre, vous permettant de filtrer les résultats directement en mode grap
 ```
 Get-EventLog -LogName Application | Select -First 1 TimeGenerated, @{Name="JourDeLaSemaine";Expression={$_.TimeGenerated.DayOfWeek}}
 # Sous PowerShell V7, Get-EventLog est déprécié, ci-dessous la ligne de commande équivalente en Get-WinEvent
-Get-WinEvent -LogName Application | Select -First 1 TimeGenerated, @{Name="JourDeLaSemaine";Expression={$_.TimeGenerated.DayOfWeek}} 
+Get-WinEvent -LogName Application | Select -First 1 TimeCreated, @{Name="JourDeLaSemaine";Expression={$_.TimeCreated.DayOfWeek}} 
 ```
 
 TimeGenerated est objet de type « DateTime ».  
