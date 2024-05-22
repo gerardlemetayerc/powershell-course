@@ -1,6 +1,6 @@
-# Initialisation de l'environnement de lab
+# Initialisation de l'environnement de lab (Hyper-V)
 
-## Déploiement de Hyper-V
+## Déploiement de Hyper-V 
 
 * Exécutez Powershell en tant qu'administrateur, puis lancez les lignes de commandes suivantes :
 
@@ -64,6 +64,8 @@ Get-NetAdapter "Ethernet" | Disable-NetAdapterBinding  -DisplayName "*v6*"
 * Sur la machine "Contrôleur de domaine"
 
 ```powershell
+# Configuration du nom d'hôte
+Rename-Computer "vm-ad"
 # Récupération de l'interface réseau à configurer
 $Adapter = Get-NetAdapter "Ethernet"
 # Configuration de l'interface réseau
@@ -78,6 +80,8 @@ Restart-Computer
 * Sur la machine "Serveur Client"
 
 ```powershell
+# Renommage de la machine
+Rename-Computer "vm-client"
 # Récupération de l'interface réseau à configurer
 $Adapter = Get-NetAdapter "Ethernet"
 # Configuration de l'interface réseau
@@ -87,5 +91,26 @@ Get-NetAdapter "Ethernet" | New-NetIPAddress -IPAddress "10.0.0.5" -PrefixLength
 # Ajout de la configuration DNS
 $Adapter | Set-DnsClientServerAddress -ServerAddresses "10.0.0.4"
 Get-TimeZone -ListAvailable | ? DisplayName -match "Paris" | Set-TimeZone
+Restart-Computer
+```
+
+
+## Installation du contrôleur de domaine
+
+* Sur la machine VM-AD
+
+```powershell
+Install-WindowsFeature -Name AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools
+Install-ADDSForest -SkipPreChecks -DomainName 'domain.local' -InstallDns
+Get-ADOptionalFeature -Filter * | Where Name -match "Recycle" | Enable-ADOptionalFeature -Scope ForestOrConfigurationSet -Target mangeney.local
+```
+
+
+* Sur la machine VM-Client
+
+
+```powershell
+# Rentrez vos identifiants au format administrator@domain.local lorsque c'est demandé
+Add-Computer -DomainName 'domain.local'
 Restart-Computer
 ```
