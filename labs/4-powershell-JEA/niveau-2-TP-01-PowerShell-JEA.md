@@ -1,5 +1,14 @@
 # TP 01 - Manipulation de JEA
 
+## Etape 0 : Création du groupe AD
+
+* Executez sur le contrôleur de domaine
+
+```
+New-ADGroup JEAAdmins Global
+Get-ADGroup JEAADmins | Add-ADGroupMember -Members Administrator
+```
+
 ## Étape 1 : Création d'un profil PowerShell JEA
 
 Executez PowerShell en tant qu'administrateur.
@@ -29,12 +38,9 @@ New-PSSession -ConfigurationName JEAProfile | Enter-PSSession
 ```
 
 
-## Etape 4 - Définition des autorisations (optionelle)
+## Etape 4 - Définition des autorisations
 
 ```
-$Group = Get-ADGroup -Identity 'JEA-SyncAdmins’ 
-Set-PSSessionConfiguration -Name 'JEAProfile' -ShowSecurityDescriptorUI 
-
-$SDDL = (Get-PSSessionConfiguration -Name 'SyncProfile').SecurityDescriptorSddl $NewSDDL = $SDDL -replace 'S:(.*)', "S:$1;G:${Group.SID}(R)« 
-Set-PSSessionConfiguration -Name 'SyncProfile' -SecurityDescriptorSddl $NewSDDL
+Set-PSSessionConfiguration -Name 'JEAProfile' -ShowSecurityDescriptorUI
+# Ajoutez le groupe "JEAAdmins" avec le droit "Read" dans les permissions
 ```
