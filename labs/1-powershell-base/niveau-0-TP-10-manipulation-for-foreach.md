@@ -1,6 +1,6 @@
 # TP 10 – Manipulation de "Foreach" et de "for"
 
-Vous allez dans ce TP réaliser une manipulation courante de la commande “foreach”. Vous aurez besoin de nouveau du fichier Excel [tp7_data.csv](/labs/1-powershell-base/resources/tp7_data.csv). 
+Vous allez dans ce TP réaliser une manipulation courante de la commande “foreach”. Vous aurez besoin de nouveau du fichier Excel [liste_des_eleves.csv](/labs/1-powershell-base/resources/tp7_data.csv). 
 
 * Chargez le contenu du fichier à l’aide de la commande Import-CSV 
 ```
