@@ -1,6 +1,6 @@
 # TP 10 – Manipulation de "Foreach" et de "for"
 
-Vous allez dans ce TP réaliser une manipulation courante de la commande “foreach”. Vous aurez besoin de nouveau du fichier Excel du TP 8. 
+Vous allez dans ce TP réaliser une manipulation courante de la commande “foreach”. Vous aurez besoin de nouveau du fichier Excel tp7_data.csv. 
 
 * Chargez le contenu du fichier à l’aide de la commande Import-CSV 
 ```
