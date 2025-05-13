@@ -24,10 +24,13 @@ Ce repository contient un curriculum complet pour apprendre PowerShell de zéro 
    - [Objets personnalisés](03-Variables-et-Types/04-Objets-personnalises.md)
    - [Variables et scopes](03-Variables-et-Types/05-Variables-et-scopes.md)
 
-### [4. Opérateurs](04-Operateurs/)
-   - [Opérateurs arithmétiques](04-Operateurs/01-Operateurs-arithmetiques.md)
-   - [Opérateurs de comparaison](04-Operateurs/02-Operateurs-de-comparaison.md)
-   - [Opérateurs logiques](04-Operateurs/03-Operateurs-logiques.md)
+### [4. Opérateurs et comparaison](04-Operateurs-et-comparaison/)
+   - [Opérateurs arithmétiques](04-Operateurs-et-comparaison/01-Operateurs-arithmetiques.md)
+   - [Opérateurs de comparaison](04-Operateurs-et-comparaison/02-Operateurs-de-comparaison.md)
+   - [Opérateurs logiques](04-Operateurs-et-comparaison/03-Operateurs-logiques.md)
+   - [L'opérateur `-match`](04-Operateurs-et-comparaison/04-Comparaison-match.md)
+   - [L'opérateur `-like`](04-Operateurs-et-comparaison/05-Comparaison-like.md)
+   - [L'opérateur `-contains`](04-Operateurs-et-comparaison/06-Comparaison-contains.md)
 
 ### [5. Structures de contrôle](05-Structures-de-controle/)
    - [Les conditions](05-Structures-de-controle/01-Les-conditions.md)
@@ -70,9 +73,6 @@ Ce repository contient un curriculum complet pour apprendre PowerShell de zéro 
    - [Écriture de scripts lisibles](11-Bonnes-pratiques/01-Ecriture-de-scripts-lisibles.md)
    - [Test et débogage](11-Bonnes-pratiques/02-Test-et-debogage.md)
    - [Commentaires et documentation](11-Bonnes-pratiques/03-Commentaires-et-documentation.md)
-
-
-(Continuez cette structure pour tous les chapitres restants.)
 
 ## Prérequis
 
