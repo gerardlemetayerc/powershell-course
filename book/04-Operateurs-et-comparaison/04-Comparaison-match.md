@@ -134,9 +134,9 @@ Voici un tableau des expressions régulières utiles pour des tâches orientées
 | `\w+\.\w+$`                   | Nom de fichier avec extension                  | `document.txt`, `script.ps1`             |
 | `\d{4}-\d{2}-\d{2}`           | Date au format ISO (YYYY-MM-DD)                | `2025-05-13`                             |
 | `\d{2}:\d{2}:\d{2}`           | Heure au format HH:mm:ss                       | `14:30:45`                               |
-| <code>\bERROR\b`|\bWARNING\b</code>       | Recherche des mots-clés `ERROR` ou `WARNING`   | `ERROR: File not found`                  |
+| <code>\bERROR\b|\bWARNING\b</code>       | Recherche des mots-clés `ERROR` ou `WARNING`   | `ERROR: File not found`                  |
 | `\b\d{10}\b`                  | Numéro de téléphone à 10 chiffres              | `0123456789`                             |
-| `\b[A-Z]:\\[^:*?"<> | ]+`       | Chemin de fichier Windows sans caractères invalides | `D:\Documents\file.txt`             |
+| <code>\b[A-Z]:\\[^:*?"<> | ]+</code>       | Chemin de fichier Windows sans caractères invalides | `D:\Documents\file.txt`             |
 | `\b(?:\d{1,3}\.){3}\d{1,3}\b` | Adresse IPv4 (valide ou non)                      | `192.168.0.1`, `10.0.0.256`                     |
 
 Ces expressions régulières peuvent être utilisées avec l'opérateur `-match` pour effectuer des recherches spécifiques dans des chaînes de caractères orientées systèmes.
