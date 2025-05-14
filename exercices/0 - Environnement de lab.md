@@ -104,7 +104,7 @@ Restart-Computer
 ```powershell
 Install-WindowsFeature -Name AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools
 Install-ADDSForest -SkipPreChecks -DomainName 'domain.local' -InstallDns
-Get-ADOptionalFeature -Filter * | Where Name -match "Recycle" | Enable-ADOptionalFeature -Scope ForestOrConfigurationSet -Target mangeney.local
+Get-ADOptionalFeature -Filter * | Where Name -match "Recycle" | Enable-ADOptionalFeature -Scope ForestOrConfigurationSet -Target domain.local
 ```
 
 
