@@ -24,3 +24,16 @@ $Service = Get-Service WinRM
   * Démarrer le service s’il est arrêté ou en pause
   * Indiquer que le service est déjà en cours de fonctionnement si ce dernier est démarré
   * Sinon, indiquez que le service est en cours de changement d’état. 
+
+
+$service = Get-Service winrm
+if($service.Status -eq 'Paused' -or $service.Status -eq 'Stopped')
+{
+  Start-Service winrm
+}
+elseif($service.status -like 'Running'){
+  Write-Host "Le service est déjà démarré"
+}
+elseif($service.status -match 'Pending') {
+  Write-Host "Le service est en cours de changement d'état"
+}
